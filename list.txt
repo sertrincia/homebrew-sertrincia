@@ -1,0 +1,10 @@
+valhalla-supermassive
+valhalla-freq-echo
+valhalla-space-modulator
+fabfilter
+deelay(broken)
+youlean-loudness-meter
+kilohearts-installer
+ilok-license-manager
+tdr-nova
+tdr-prism
