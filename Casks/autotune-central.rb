@@ -13,7 +13,7 @@ cask "autotune-central" do
     regex(/Auto_Tune_Central_(\d+\.\d+\.\d+)_universal.dmg"/i) 
   end
 
-  app "Auto-Tune Central"
+  app "Auto-Tune Central.app"
 
   uninstall pkgutil: ""
 

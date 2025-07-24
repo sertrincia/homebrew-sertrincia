@@ -2,8 +2,7 @@ cask "audio-modeling-software-center" do
   version "2.0.4-461"
   sha256 "e7be33038773d645657c6d9e83e5cef5ea5ddac0446fc94e8b40492c0ef64562"
 
-  url "https://static.audiomodeling.com/software_center/AudioModelingSoftwareCenter-#{version}-osx-installer.dmg",
-  		verified: "static.audiomodeling.com/software_center/"
+  url "https://static.audiomodeling.com/software_center/AudioModelingSoftwareCenter-#{version}-osx-installer.dmg"
   name "Audio Modeling Software Center"
   desc "Application for downloading, installing and updating Audio Modeling desktop products"
   homepage "https://audiomodeling.com/"
@@ -13,7 +12,7 @@ cask "audio-modeling-software-center" do
     regex(/AudioModelingSoftwareCenter[._-](\d+(?:\.\d+)+-\d+)-osx-installer\.dmg/i)
   end
 
-  app "Audio Modeling Software Center.app"
+  installer manual: "Audio Modeling Software Center.app"
 
   uninstall script: {
     executable: "/Applications/Audio Modeling/Software Center/uninstall.app",
