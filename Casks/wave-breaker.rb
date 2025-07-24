@@ -1,4 +1,5 @@
 cask "wave-breaker" do
+  #da errore anche con :no_check problema di indirizzo
   version "2.1.0"
   sha256 "6bf814149e8670fd0a2e41b7e12a061c592e59e2fe3ca5c608a67f0c62570974"
 
@@ -13,6 +14,11 @@ cask "wave-breaker" do
   end
 
   pkg "WaveBreaker_#{version}"
+
+  uninstall pkgutil: [
+    "com.PressPlay.pkg.WaveBreaker.aax",
+    "com.PressPlay.pkg.WaveBreaker.Component",
+    "com.PressPlay.pkg.WaveBreaker.vst3"]
 
   uninstall delete: [
     "/Library/Audio/Plug-Ins/VST3/WaveBreaker.vst3",
