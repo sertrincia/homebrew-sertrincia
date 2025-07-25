@@ -25,7 +25,7 @@ cask "audio-modeling-software-center" do
     args:       ["--mode", "unattended"],
     sudo:       true,
     input:      "",
-    env:        {"DISPLAY" => "", "CI" => "1"},
+    env:        { "DISPLAY" => "", "CI" => "1" },
   }
 
   zap trash: [
