@@ -13,6 +13,13 @@ cask "autotune-central" do
     regex(/Auto_Tune_Central_(\d+\.\d+\.\d+)_universal.dmg"/i) 
   end
 
+  depends_on macos: ">= :high_sierra"
+
+  preflight do
+    app_path = "/Applications/Auto-Tune Central.app"
+    system_command "/bin/rm", args: ["-rf", app_path], sudo: false if File.exist?(app_path)
+  end
+
   app "Auto-Tune Central.app"
 
   uninstall pkgutil: "com.antares.pkg.antares-central-atc"

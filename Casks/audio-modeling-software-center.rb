@@ -13,7 +13,7 @@ cask "audio-modeling-software-center" do
   end
 
   installer script: {
-    executable: "AudioModelingSoftwareCenter.app/Contents/MacOS/installbuilder.sh",
+    executable: "AudioModelingSoftwareCenter-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
     args:       ["--unattended", "--quiet"],
     sudo:       true,
   }
