@@ -1,14 +1,14 @@
- cask "wave-breaker" do
-  version "2.1.0"
-  sha256 :no_check
+ cask "dfx-rez-synth" do
+  version "2.0.1"
+  sha256 ""
 
-  url "https://pressplay-music.com/download/1405/"
-  name "Wave Breaker"
-  desc "Freemium true peak limiter"
-  homepage "https://pressplay-music.com/wave-breaker/"
+  url "http://destroyfx.org/software/rezsynth-#{version}-mac.dmg"
+  name "Destroy FX Rez Synth"
+  desc "Playable resonant band-pass filter"
+  homepage "http://www.destroyfx.org/"
 
   livecheck do
-    url "https://pressplay-music.com/wave-breaker/"
+    url "http://www.destroyfx.org/"
     regex(/Wave Breaker (\d+\.\d+\.\d+) for macOS/i) 
   end
 
