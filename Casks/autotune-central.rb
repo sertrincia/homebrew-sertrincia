@@ -15,6 +15,5 @@ cask "autotune-central" do
 
   app "Auto-Tune Central.app"
 
-  uninstall pkgutil: ""
-
+  uninstall pkgutil: "com.antares.pkg.antares-central-atc"
 end

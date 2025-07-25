@@ -9,9 +9,9 @@ cask "arturia-software-center" do
   homepage "https://arturia.com/"
 
   livecheck do
-    skip
-    # url "https://arturia.com/technology/asc"
-    # regex(/href=Arturia_Software_Center__(\d+_\d+_\d+_\d+)\.pkg/i)
+    # skip
+    url "https://arturia.com/technology/asc"
+    regex(/Arturia_Software_Center__(\d+_\d+_\d+_\d+)\.pkg/i)
   end
 
   pkg "Arturia_Software_Center__#{version}.pkg"

@@ -12,7 +12,7 @@ cask "audio-modeling-software-center" do
     regex(/AudioModelingSoftwareCenter[._-](\d+(?:\.\d+)+-\d+)-osx-installer\.dmg/i)
   end
 
-  install script: {
+  installer script: {
     executable: "Audio Modeling Software Center.app/Contents/MacOS/installbuilder.sh",
     # args:       ["--unattended"],
     sudo:       true,
