@@ -9,15 +9,14 @@
   homepage "https://www.patreon.com/posts/busterse-42658623"
 
   livecheck do
-    url "https://www.patreon.com/posts/busterse-42658623"
-    regex(/analogobsession.com\/wp-content\/uploads\/2022\/12\/BUSTERse_(\d+\.\d+\.\d+).pkg/i) 
+    skip "Info on Patreon page"
   end
 
   pkg "BUSTERse_#{version}.pkg"
 
   uninstall pkgutil: [
     "com.AnalogObsession.au.pkg.BUSTERse",
-    "com.AnalogObsession.vts3.pkg.BUSTERse",
+    "com.AnalogObsession.vst3.pkg.BUSTERse",
     "com.AnalogObsession.aax.pkg.BUSTERse"]
 
 end
