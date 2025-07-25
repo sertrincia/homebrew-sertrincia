@@ -20,13 +20,21 @@ cask "audio-modeling-software-center" do
     sudo:       true,
   }
 
-  uninstall script: {
-    executable: "/Applications/Audio Modeling/Software Center/uninstall.app/Contents/MacOS/installbuilder.sh",
+  # uninstall script: {
+  #   executable: "/Applications/Audio Modeling/Software Center/uninstall.app/Contents/MacOS/installbuilder.sh",
+  #   args:       ["--mode", "unattended"],
+  #   sudo:       true,
+  #   input:      "",
+  #   env:        {"DISPLAY" => "", "CI" => "1"},
+  # }
+
+  uninstall_postflight do
+    system_command "/Applications/Audio Modeling/Software Center/uninstall.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended"],
     sudo:       true,
     input:      "",
     env:        {"DISPLAY" => "", "CI" => "1"},
-  }
+  end
 
   zap trash: [
     "~/Library/Audio Modeling/Software Center",
