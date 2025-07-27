@@ -9,20 +9,17 @@ cask "gullfoss" do
 
   livecheck do
     url "https://www.soundtheory.com/downloads"
-    regex(/Soundtheory.com\/static\/Soundtheory%20Gullfoss%20(\d+\.\d+\.\d+).dmg/i) 
+    regex(%r{/Soundtheory.com/static/Soundtheory%20Gullfoss%20(\d+\.\d+\.\d+).dmg})
   end
 
   depends_on macos: ">= :mavericks"
 
   pkg "Gullfoss #{version} Installer.pkg"
 
-  uninstall pkgutil:[
+  uninstall pkgutil: [
     "com.soundtheory.gullfoss.aax.install",
-    "com.soundtheory.gullfoss.vst3.install",
     "com.soundtheory.gullfoss.audiounit.install",
     "com.soundtheory.gullfoss.vst.install",
-    # "com.paceap.pkg.eden.iLokLicenseManager",
-    # "com.paceap.pkg.eden.licensed",
-    # "com.paceap.pkg.eden.activationexperience",
+    "com.soundtheory.gullfoss.vst3.install",
   ]
 end

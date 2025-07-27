@@ -15,8 +15,9 @@ cask "zl-equalizer" do
   pkg "ZL Equalizer-#{version}-macOS-arm.pkg"
 
   uninstall pkgutil: [
-    "com.zlaudio.plugins.ZLEqualizer.standalone",
     "com.zlaudio.plugins.ZLEqualizer.aax",
     "com.zlaudio.plugins.ZLEqualizer.au",
-    "com.zlaudio.plugins.ZLEqualizer.vst3"]
+    "com.zlaudio.plugins.ZLEqualizer.standalone",
+    "com.zlaudio.plugins.ZLEqualizer.vst3",
+  ]
 end

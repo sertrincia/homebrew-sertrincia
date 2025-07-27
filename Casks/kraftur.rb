@@ -9,7 +9,7 @@ cask "kraftur" do
 
   livecheck do
     url "https://www.soundtheory.com/downloads"
-    regex(/Soundtheory.com\/static\/Soundtheory%20Kraftur%20(\d+\.\d+\.\d+).dmg/i) 
+    regex(%r{/Soundtheory.com/static/Soundtheory%20Kraftur%20(\d+\.\d+\.\d+).dmg})
   end
 
   depends_on macos: ">= :high_sierra"
