@@ -10,7 +10,7 @@ cask "zl-equalizer" do
   livecheck do
       url "https://github.com/ZL-Audio/ZLEqualizer/"
       strategy :github_latest
-    end
+  end
 
   pkg "ZL Equalizer-#{version}-macOS-arm.pkg"
 

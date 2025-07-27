@@ -12,7 +12,7 @@ cask "gullfoss" do
     regex(%r{/Soundtheory.com/static/Soundtheory%20Gullfoss%20(\d+\.\d+\.\d+).dmg})
   end
 
-  depends_on macos: ">= :mavericks"
+  depends_on macos: ">= :high_sierra"
 
   pkg "Gullfoss #{version} Installer.pkg"
 

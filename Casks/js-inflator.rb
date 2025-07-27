@@ -8,8 +8,8 @@ cask "js-inflator" do
   homepage "https://github.com/Kiriki-liszt/JS_Inflator"
 
   livecheck do
-      url "https://github.com/Kiriki-liszt/JS_Inflator"
-      strategy :github_latest
+    url "https://github.com/Kiriki-liszt/JS_Inflator"
+    strategy :github_latest
   end
 
   audio_unit_plugin "JS_Inflator.component"
