@@ -1,27 +1,22 @@
- cask "dfx-rez-synth" do
-  version "2.0.1"
-  sha256 ""
+ cask "wave-breaker" do
+  version "2.1.0"
+  sha256 :no_check #"6bf814149e8670fd0a2e41b7e12a061c592e59e2fe3ca5c608a67f0c62570974"
 
-  url "http://destroyfx.org/software/rezsynth-#{version}-mac.dmg"
-  name "Destroy FX Rez Synth"
-  desc "Playable resonant band-pass filter"
-  homepage "http://www.destroyfx.org/"
+  url "https://pressplay-music.com/download/1405/"
+  name "Wave Breaker"
+  desc "Freemium true-peak limiter"
+  homepage "http://www.pressplay-music.com/wave-breaker/"
 
   livecheck do
-    url "http://www.destroyfx.org/"
+    url "https://pressplay-music.com/wave-breaker/#downloads"
     regex(/Wave Breaker (\d+\.\d+\.\d+) for macOS/i) 
   end
 
-  pkg "WaveBreaker_#{version}"
+  pkg "WaveBreaker_#{version}.pkg"
 
   uninstall pkgutil: [
     "com.PressPlay.pkg.WaveBreaker.aax",
     "com.PressPlay.pkg.WaveBreaker.Component",
-    "com.PressPlay.pkg.WaveBreaker.vst3"]
-
-  uninstall delete: [
-    "/Library/Audio/Plug-Ins/VST3/WaveBreaker.vst3",
-    "/Library/Audio/Plug-Ins/Components/WaveBreaker.component",
-    "/Library/Application Support/Avid/Audio/Plug-Ins/WaveBreaker.aaxplugin"]
-
+    "com.PressPlay.pkg.WaveBreaker.vst3",
+  ]
 end
