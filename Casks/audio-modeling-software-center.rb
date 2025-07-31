@@ -27,7 +27,7 @@ cask "audio-modeling-software-center" do
   }
 
   zap trash: [
-    "~/Library/Audio Modeling/Software Center",
     "/Users/Shared/Audio Modeling/Software Center",
+    "~/Library/Audio Modeling/Software Center",
   ]
 end
