@@ -20,7 +20,5 @@ cask "js-inflator" do
     "/Library/Audio/Plug-Ins/VST3/JS_Inflator.vst3",
   ]
 
-  zap trash: [
-    "~/Library/Audio/Presets/yg331/JS Inflator",
-  ]
+  zap trash: "~/Library/Audio/Presets/yg331/JS Inflator"
 end
